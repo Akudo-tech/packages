@@ -137,6 +137,9 @@ class FileUtils {
   }
 
   private static String getBaseName(String fileName) {
+    if(!fileName.contains(".")){
+      return fileName;
+    }
     // Basename is everything before the last '.'.
     return fileName.substring(0, fileName.lastIndexOf('.'));
   }
